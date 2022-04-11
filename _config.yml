@@ -4,17 +4,18 @@
 
 # Site
 title: Douchen's Blog
-subtitle: ''
-description: ''
-keywords:
-author: Chen Dou
-language: en
+subtitle: Welcome to My Wonderland
+description: Welcome to My Wonderland
+keywords: Douchen Blog
+author: Douchen
+language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
+url: http://blog.douchen.life
+root: /
+permalink: title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
