@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Douchen's Blog
-subtitle: Welcome to My Wonderland
-description: Welcome to My Wonderland
+title: 窦晨的博客  # 网页标题
+subtitle: 知足且坚定, 温柔且上进  # 网页子标题
+description: 知足且坚定, 温柔且上进 # 描述
 keywords: Douchen Blog
-author: Douchen
+author: 窦晨
 language: zh-CN
 timezone: ''
 
