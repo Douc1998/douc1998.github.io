@@ -1,0 +1,40 @@
+- class_name: 学习网站
+  class_desc: 
+  link_list:
+    - name: GitHub
+      link: https://github.com/
+      avatar: ../image/github.png
+      descr: 代码托管仓库--最大的开源社区
+    - name: React
+      link: https://zh-hans.reactjs.org/
+      avatar: ../image/react.png
+      descr: 用于构建用户界面的 JavaScript 库
+    - name: Hexo
+      link: https://hexo.io/zh-cn/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简单且强大的网络博客框架
+
+
+- class_name: 娱乐网站
+  class_desc: 
+  link_list:
+    - name: QQ
+      link: https://im.qq.com/index
+      avatar: ../image/QQ.png
+      descr: 社交软件
+    - name: 微信
+      link: https://weixin.qq.com/
+      avatar: ../image/wechat.png
+      descr: 社交软件
+    - name: Youtube
+      link: https://www.youtube.com/
+      avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
+      descr: 视频网站
+    - name: Weibo
+      link: https://www.weibo.com/
+      avatar: ../image/weibo.png
+      descr: 中国最大社交分享平台
+    - name: Twitter
+      link: https://twitter.com/
+      avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
+      descr: 社交分享平台
