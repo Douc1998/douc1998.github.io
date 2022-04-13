@@ -128,9 +128,8 @@ cover:
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   # 文章默认封面图片, 下面是多张图片的写法, 加载时会随机使用某个图片
   default_cover:
+  - /img/index.webp
   - https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png
-  - https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png
-  - https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg3.png
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -267,7 +266,7 @@ comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo
   use: 
-    - Gitalk
+    - Gitalk  # (设置gitalk作为评论区)
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -296,12 +295,13 @@ livere:
 
 # gitalk
 # https://github.com/gitalk/gitalk
+# 需要发布 OAuth 应用
 gitalk:
   client_id: 0e4b9923c23931aed9e5
   client_secret: a64ad83c7dfc2bc7e80914bf13a338e5987f37a7
-  repo: douc1998.github.io
-  owner: Douc1998
-  admin: Douc1998
+  repo: douc1998.github.io  # 评论会显示在该仓库的issue中
+  owner: Douc1998  # 创建OAuth的账号
+  admin: Douc1998  # 仓库持有者账号
   language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru
   perPage: 10 # Pagination size, with maximum 100.
   distractionFreeMode: false # Facebook-like distraction free mode.

@@ -2,7 +2,7 @@
 title: Hello
 date: 2022-04-11 12:13:06
 tags:
-cover: ../image/myLogo.png
+cover: ../image/index.webp
 ---
 # 标题
 我的第一篇blog
