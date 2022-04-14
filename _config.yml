@@ -41,7 +41,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true  # 设置为true, 创建文章时会自动创建相同名称的资源文件夹
 relative_link: false
 future: true
 highlight:
@@ -106,3 +106,19 @@ deploy:
   type: git
   repository: https://github.com/Douc1998/douc1998.github.io
   branch: master
+
+algolia:
+  appId: "6OGAFHHUPC"
+  apiKey: "b02de504190772e6e436b7e454beae90"
+  adminApiKey: "8955f1d17923f34ad505c787bee49c32"
+  chunkSize: 5000
+  indexName: "blog"
+  fields:
+    - content:strip:truncate,0,500
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
