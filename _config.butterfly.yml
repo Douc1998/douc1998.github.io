@@ -18,13 +18,13 @@ menu:
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
-# Code Blocks (代碼相關)
+# Code Blocks (代码相关)
 # --------------------------------------
 
 highlight_theme: mac light #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
-highlight_shrink: true # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
+highlight_shrink: false # true: 代码不展开shrink the code blocks / false: 代码展开expand the code blocks | none: expand code blocks and hide the button
 highlight_height_limit: 300 # unit: px
 code_word_wrap: false
 
@@ -181,10 +181,10 @@ anchor: true
 
 # toc (目录)
 toc:
-  post: true
-  page: false
-  number: true
-  expand: false
+  post: true  # 文章页是否显示toc
+  page: false # 普通页面是否显示toc
+  number: true  # 是否显示章节数
+  expand: true  # 是否展开tov
   style_simple: true # for post(简介模式, 侧边栏只显示目录, 只对文章有效)
 
 post_copyright:
@@ -473,11 +473,11 @@ site_verification:
 # 主题美化
 theme_color:
   enable: true
-  main: "#49B1F5"
+  main: "#1B1F23"  # 各部分内容默认颜色、文章头部和页脚、按钮颜色等
   paginator: "#00c4b6"
-  button_hover: "#FF7242"
+  button_hover: "#00c4b6"
   text_selection: "#00c4b6"
-  link_color: "#99a9bf"
+  link_color: "#49b1f5"
   meta_color: "#858585"
   hr_color: "#A4D8FA"
   code_foreground: "#F47466"
@@ -644,7 +644,7 @@ aside:
     enable: true
     description:
     button:
-      enable: true
+      enable: false
       icon: fab fa-github
       text: Follow Me
       link: https://github.com/Douc1998
