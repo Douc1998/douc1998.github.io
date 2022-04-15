@@ -8,7 +8,7 @@ menu:
     标签: /tags/ || fas fa-tags
     归档: /archives/ || fas fa-archive
     分类: /categories/ || fas fa-folder-open
-  生活||fa fa-heartbeat:
+  生活||fa fa-icons:
     照片: /photo/ || fas fa-images
     音乐: /music/ || fas fa-music
     电影: /movies/ || fas fa-video
@@ -16,7 +16,7 @@ menu:
     篮球: /basketball/ || fas fa-basketball
     羽毛球: /badminton/ || fas fa-golf-ball-tee
   友链: /link/ || fas fa-link
-  关于: /about/ || fas fa-heart
+  关于: /about/ || fas fa-user-astronaut
 
 # Code Blocks (代码相关)
 # --------------------------------------
@@ -48,13 +48,13 @@ social:
 
 # Algolia search (algolia云搜索服务)
 algolia_search:
-  enable: true
+  enable: false
   hits:
     per_page: 6
 
 # Local search (本地搜索)
 local_search:
-  enable: false
+  enable: true
 
 # Math (數學)
 # --------------------------------------
@@ -231,7 +231,7 @@ related_post:
   date_type: created # or created or updated 文章日期顯示創建日或者更新日
 
 # figcaption (图片描述文字)
-photofigcaption: false
+photofigcaption: true
 
 # post_pagination (分頁)
 # value: 1 || 2 || false
@@ -485,7 +485,7 @@ site_verification:
 # 主题美化
 theme_color:
   enable: true
-  main: "#1B1F23"  # 各部分内容默认颜色、文章头部和页脚、按钮颜色等
+  main: "rgba(27, 31, 35, 1)"  # 各部分内容默认颜色、文章头部和页脚、按钮颜色等
   paginator: "#00c4b6"
   button_hover: "#00c4b6"
   text_selection: "#00c4b6"
@@ -495,9 +495,9 @@ theme_color:
   code_foreground: "#F47466"
   code_background: "rgba(27, 31, 35, .05)"
   toc_color: "#00c4b6"
-  blockquote_padding_color: "#1B1F23"
-  blockquote_background_color: "#1B1F23"
-  scrollbar_color: "#1B1F23"
+  blockquote_padding_color: "rgba(27, 31, 35, 1)"
+  blockquote_background_color: "rgba(27, 31, 35, 1)"
+  scrollbar_color: "rgba(27, 31, 35, 1)"
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
@@ -634,9 +634,9 @@ subtitle:
 
   # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
   sub:
-    - 欢迎来到我的世界 !
-    - Welcome to My World !
-    - 今日事, 今日毕
+    - 欢迎来到我的世界 ！
+    - Welcome to My World ！
+    - 今日事， 今日毕
     - Never put off till tomorrow what you can do today
     
 

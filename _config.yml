@@ -107,6 +107,14 @@ deploy:
   repository: https://github.com/Douc1998/douc1998.github.io
   branch: master
 
+# 本地搜索
+search:
+  path: search.xml
+  field: post  # page\post\all ---post只搜文章
+  content: false  # 是否搜文章里面的内容
+  template:  # ---模板
+
+# algolia云端搜索
 algolia:
   appId: "6OGAFHHUPC"
   apiKey: "b02de504190772e6e436b7e454beae90"

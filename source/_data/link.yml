@@ -1,3 +1,27 @@
+- class_name: 一群有意思的人
+  class_desc: 
+  link_list:
+    - name: GeoAI&STVAL @ Wuhan University
+      link: https://github.com/ZPGuiGroupWhu
+      avatar: ../image/club.jpeg
+      descr: 武汉大学地理人工智能与时空可视化分析研究组
+    - name: 孙云增
+      link: https://sunyunzeng.com
+      avatar: ../image/syz.jpeg
+      descr: 同门大佬师兄1号（已毕业，WHU）
+    - name: 王锦添
+      link: https://wangjintian.com
+      avatar: ../image/wjt.jpeg
+      descr: 同门大佬师兄2号（研二，WHU）
+    - name: 贾明晖
+      link: https://github.com/MinghuiJia
+      avatar: ../image/jmh.png
+      descr: 本科大佬室友（研一，WHU）
+    - name: 房祖锐
+      link: https://github.com/FangZurui
+      avatar: ../image/fzr.png
+      descr: 本科小佬室友（研0，CUG）
+
 - class_name: 学习网站
   class_desc: 
   link_list:
