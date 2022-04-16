@@ -92,6 +92,43 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
 >
 >如果不了解 `background` 的相关参数的话，可以参考本人 Github 中的 CSS 笔记 👉 [设置背景图片](https://github.com/Douc1998/CSS-Notes/issues/3)。
 
+静态效果如下：
+<br>
+
+<style>
+  .logo0{
+    width: 500px;  
+    height: 100px;
+    position: relative;   
+    color: transparent;
+    background-image: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo.svg'); 
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* 也可以统一，直接用 background写， 按照参数顺序即可 */
+    /* background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo.svg') center/contain no-repeat; */
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .logo0::after{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/icons.svg'); 
+    background-position: 0% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* 也可以统一，直接用 background写， 按照参数顺序即可 */
+    /* background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/icons.svg') 0% 50% / cover no-repeat;*/
+    right: 113px;
+    top: -18px;
+}
+</style>
+<div class='logo0'></div>
+<br>
+
 我们刚刚在 **思路** 中提到，动画实现效果就是 **让条状长图在一个窗口上向左/右移动**。那么我们需要自定义一个 `move` 动画实现 `background-position` 的改变：
 ```CSS
 /* 动画函数 -- background-position 在水平位置上移动到100% */
