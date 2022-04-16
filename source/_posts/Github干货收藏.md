@@ -7,8 +7,8 @@ tags:
 categories: Github
 comments: true
 toc: true
-top_img: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/astronaut4.png
-cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/github.png
+top_img: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut4.png
+cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
 ---
 **用于收藏 `Github` 上的优秀项目，需要自取👇，欢迎分享与添加～**
 

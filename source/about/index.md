@@ -2,7 +2,7 @@
 title: 关于
 date: 2022-04-16 18:18:30
 type: 'about'
-top_img: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/littlePrince6.png
+top_img: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/littlePrince6.png
 ---
 
 本来想上传个简历到这儿的，但是感觉在自己的博客里用简历好像有点过于正式和严肃了🤔️ ？
