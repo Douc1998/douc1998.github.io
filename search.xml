@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello</title>
+    <url>/Hello/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Ant Design Logo彩蛋动画实现</title>
     <url>/Ant-Design-Logo%E5%BD%A9%E8%9B%8B%E5%8A%A8%E7%94%BB%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[]]></content>
@@ -47,8 +52,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello</title>
-    <url>/Hello/</url>
+    <title>基于 jsDeliver + Github 搭建免费图床教程</title>
+    <url>/%E5%9F%BA%E4%BA%8EjsDeliver-Github%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>jsDeliver</tag>
+      </tags>
   </entry>
 </search>
