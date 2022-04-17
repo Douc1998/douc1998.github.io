@@ -1,7 +1,7 @@
 - class_name: 一群有意思的人
   class_desc: 
   link_list:
-    - name: GeoAI&STVAL @ Wuhan University
+    - name: 研究团队
       link: https://github.com/ZPGuiGroupWhu
       avatar: ../image/club.jpeg
       descr: 武汉大学地理人工智能与时空可视化分析研究组
@@ -14,7 +14,7 @@
       avatar: ../image/wjt.jpeg
       descr: 同门大佬师兄2号（研二，WHU）
     - name: 贾明晖
-      link: https://github.com/MinghuiJia
+      link: http://minghuijia.cn/
       avatar: ../image/jmh.png
       descr: 本科大佬室友（研一，WHU）
     - name: 房祖锐

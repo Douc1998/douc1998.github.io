@@ -86,7 +86,6 @@ cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
 🔗 链接：https://github.com/xioacd99/study-is-wonderful
 
 
-
 ---
 # 学习辅助
 + **`Reactive-Resume`** 
@@ -117,6 +116,12 @@ cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
 👍 推荐指数：⭐️⭐️⭐️
 🔗 链接：https://github.com/mtlynch/picoshare
 
++ **`Markdown语法手册`**
+📑 描述：一个由作者独自整理的 **Markdown语法手册**，内容完整，强烈推荐Markdown新手学习。
+👍 推荐指数：⭐️⭐️⭐️⭐️⭐️
+🔗 链接：https://yuhongjun.github.io/tech/2017/05/02/Markdown-语法手册-完整整理版.html
+
+
 ---
 # 生活
 + **`HowToCook`**
@@ -124,6 +129,10 @@ cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
 👍 推荐指数：⭐️⭐️
 🔗 链接：https://github.com/Anduin2017/HowToCook
 
++ **`Cook`**
+📑 描述：一个**做菜小工具**，可以根据食材和工具快速搜索出组合的菜谱，并点可以点击跳转到相应的B站做菜视频链接，便于做菜小白学习。
+👍 推荐指数：⭐️⭐️
+🔗 链接：https://github.com/YunYouJun/cook
 
 ---
 # 博客
