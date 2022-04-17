@@ -1,15 +1,15 @@
 ---
-title: 基于 jsDeliver + Github 搭建免费图床教程
+title: 基于 jsDelivr + Github 搭建免费图床教程
 date: 2022-04-17 22:16:52
 tags: 
-     - jsDeliver
+     - jsDelivr
      - Github
 categories: 教程 
 comments: true
 toc: true
 top_img: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut3.png
 cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut3.png
-keywords: "jsDeliver, Github"
+keywords: "jsDelivr, Github"
 ---
 
 # 前言
