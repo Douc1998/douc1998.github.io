@@ -25,16 +25,9 @@
       </tags>
   </entry>
   <entry>
-    <title>基于 jsDelivr + Github 搭建免费图床教程</title>
-    <url>/%E5%9F%BA%E4%BA%8EjsDelivr-Github%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/</url>
+    <title>Hello</title>
+    <url>/Hello/</url>
     <content><![CDATA[]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>jsDelivr</tag>
-      </tags>
   </entry>
   <entry>
     <title>Hexo博客配置Gitalk评论系统</title>
@@ -59,8 +52,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello</title>
-    <url>/Hello/</url>
+    <title>基于 jsDelivr + Github 搭建免费图床教程</title>
+    <url>/%E5%9F%BA%E4%BA%8EjsDelivr-Github%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>jsDelivr</tag>
+      </tags>
   </entry>
 </search>
