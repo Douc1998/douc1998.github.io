@@ -22,7 +22,7 @@
       avatar: ../image/fzr.png
       descr: 本科小佬室友（研0，CUG）
 
-- class_name: 学习网站
+- class_name: 学习链接
   class_desc: 
   link_list:
     - name: GitHub
@@ -37,6 +37,10 @@
       link: https://hexo.io/zh-cn/
       avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
       descr: 快速、简单且强大的网络博客框架
+    - name: 阮一峰老师
+      link: https://www.ruanyifeng.com/blog/
+      avatar: ../image/ryf.jpeg
+      descr: 阮一峰老师的网络日志
 
 
 - class_name: 娱乐网站

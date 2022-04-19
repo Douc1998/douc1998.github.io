@@ -43,6 +43,11 @@ cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
 👍 推荐指数：⭐️⭐️⭐️⭐️⭐️
 🔗 链接：https://github.com/javascript-tutorial/zh.javascript.info
 
++ **`阮一峰老师的JavaScript各类教程`**
+📑 描述：阮一峰老师博客中关于**各类JavaScript相关教程**，包括ES6、React、jQuery等，内容十分丰富。强烈推荐
+👍 推荐指数：⭐️⭐️⭐️⭐️⭐️⭐️
+🔗 链接：https://www.ruanyifeng.com/blog/javascript/
+
 + **`JavaScript Visualizer`**
 📑 描述：一个开源的 **JavaScript 可视化调试工具**。输入代码运行后，可动态展示任务队列、调用栈、Event Loop等过程与结果。适合帮助小白了解JS引擎内部原理和调试代码。
 👍 推荐指数：⭐️⭐️
@@ -87,7 +92,7 @@ cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
 
 
 ---
-# 学习辅助
+# 学习辅助(其他)
 + **`Reactive-Resume`** 
 📑 描述：一款完全免费的**开源简历生成器**，可以创建多份简历，可以 PDF 格式打印，具有良好的隐私保护性。
 👍 推荐指数：⭐️⭐️⭐️⭐️⭐️
@@ -121,6 +126,10 @@ cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
 👍 推荐指数：⭐️⭐️⭐️⭐️⭐️
 🔗 链接：https://yuhongjun.github.io/tech/2017/05/02/Markdown-语法手册-完整整理版.html
 
++ **`科技爱好者周刊`**
+📑 描述：由阮一峰老师组织的**科技周刊**，记录每周值得分享的科技内容，每周五发布。
+👍 推荐指数：⭐️⭐️⭐️⭐️
+🔗 链接：https://github.com/ruanyf/weekly
 
 ---
 # 生活
@@ -134,6 +143,10 @@ cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
 👍 推荐指数：⭐️⭐️
 🔗 链接：https://github.com/YunYouJun/cook
 
++ **`HowToLiveLonger`**
+📑 描述：作者总结的**程序员延寿指南**，记录饮食、运动、心情等多方面对寿命的影响，并推荐一些健康的饮食搭配和体育运动等。
+👍 推荐指数：⭐️⭐️⭐️⭐️
+🔗 链接：https://github.com/geekan/HowToLiveLonger
 ---
 # 博客
 
