@@ -1,5 +1,5 @@
 ---
-title: Github干货收藏
+title: Github干货收藏(持续更新)
 date: 2022-04-15 17:36:10
 tags: 
     - Github
@@ -9,6 +9,7 @@ comments: true
 toc: true
 top_img: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut4.png
 cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
+sticky: 10  # 置顶，数值越大优先级越高
 ---
 **用于收藏 `Github` 上的优秀项目，需要自取👇，欢迎分享与添加～**
 
@@ -93,9 +94,10 @@ cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
 
 ---
 # 学习辅助(其他)
+
 + **`Reactive-Resume`** 
 📑 描述：一款完全免费的**开源简历生成器**，可以创建多份简历，可以 PDF 格式打印，具有良好的隐私保护性。
-👍 推荐指数：⭐️⭐️⭐️⭐️⭐️
+👍 推荐指数：⭐️⭐️⭐️⭐️
 🔗 链接：https://github.com/AmruthPillai/Reactive-Resume
 
 
@@ -111,10 +113,17 @@ cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
 🔗 链接：https://github.com/jerryc127/hexo-theme-butterfly
 
 
++ **`Apache-Superset`**
+📑 描述：Superset是一款以Python为主开发语言的Web应用，是一个**无代码数据可视化平台**。Superset可以提供各种漂亮的可视化效果以展示你的数据，从简单的条形图到地理空间可视化。**（但没有Windows版）**
+👍 推荐指数：⭐️⭐️⭐️
+🔗 链接：https://github.com/apache/superset
+
+
 + **`JSON-Visio`**
 📑 描述：一个开源的 **JSON 数据可视化工具**，可以通过图表节点，完美呈现 JSON 数据间的结构关系与详情，支持离线使用。
 👍 推荐指数：⭐️⭐️⭐️
 🔗 链接：https://github.com/AykutSarac/jsonvisio.com
+
 
 + **`PicoShare`**
 📑 描述：一个开源的 **文件共享系统**，简单易用、不限制文件大小、可直接生成下载链接、支持自托管部署、数据安全性可控。(可代替 某度云 使用)

@@ -136,6 +136,8 @@ cover:
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/littlePrince6.png
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/scene4.png
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/scene5.png
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/scene6.jpeg
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/scene7.jpg
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space2.png
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space3.png
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space6.png
@@ -143,6 +145,8 @@ cover:
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space10.png
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space11.png
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space12.png
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space13.jpeg
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/sky1.jpeg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
