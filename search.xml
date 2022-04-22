@@ -25,6 +25,11 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello</title>
+    <url>/Hello/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Github干货收藏(持续更新)</title>
     <url>/Github%E5%B9%B2%E8%B4%A7%E6%94%B6%E8%97%8F/</url>
     <content><![CDATA[]]></content>
@@ -37,9 +42,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello</title>
-    <url>/Hello/</url>
+    <title>Hexo博客配置Gitalk评论系统</title>
+    <url>/Hexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AEGitalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
   </entry>
   <entry>
     <title>基于 Github Page + Hexo + Butterfly主题 的个人博客搭建教程 (Mac版)</title>
@@ -65,14 +76,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客配置Gitalk评论系统</title>
-    <url>/Hexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AEGitalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
+    <title>浅谈CSS position中的relative和absolute</title>
+    <url>/%E6%B5%85%E8%B0%88CSS-position%E4%B8%AD%E7%9A%84relative%E5%92%8Cabsolute/</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>教程</category>
+        <category>CSS</category>
       </categories>
       <tags>
-        <tag>博客</tag>
+        <tag>前端</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
 </search>
