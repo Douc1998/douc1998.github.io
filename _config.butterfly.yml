@@ -79,7 +79,7 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: /img/favicon.png
+favicon: /img/catLogo.png
 
 # Avatar (头像)
 avatar:
@@ -138,7 +138,12 @@ cover:
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/scene5.png
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/scene6.jpeg
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/scene7.jpg
-  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space2.png
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/scene8.jpeg
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/scene9.jpg
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/scene10.jpeg
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/scene11.jpeg
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space12.jpeg
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/scene13.jpeg
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space3.png
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space6.png
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space9.png
@@ -147,6 +152,7 @@ cover:
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space12.png
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space13.jpeg
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/sky1.jpeg
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/book1.jpeg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
