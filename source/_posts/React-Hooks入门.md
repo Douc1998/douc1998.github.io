@@ -23,7 +23,6 @@ keywords: "React, Hooks"
 
 ## 类组件
 写过 React 的人都知道，我们刚入门所接触的 React 都是从类组件开始，如下：
-
 ```jsx
 class HelloWorld extends React.Component {
     render() {
@@ -94,7 +93,6 @@ export default function HelloWorld(props) {
 `useState()` 也可以一眼看出大概是做什么用的，它就是给我们的函数组件**添加和修改状态**的钩子函数。因为函数组件没有状态，所以把需要的“状态”都存放在钩子里。
 
 我们举一个例子，创建一个 `Button` 函数组件，并赋予其一个状态，即文本值，当触发点击操作时，文本状态值会改变。代码如下所示：
-
 ```jsx
 import React, { useState } from "react";
 
@@ -118,7 +116,6 @@ export default function Button(props)  {
 看到 `useRef()` 我们应该不陌生，因为 React 在类组件中提供 `createRef` 方法帮助我们**获取DOM节点**。而在 React Hooks 中则提供了 `useRef()` 钩子实现相同作用。
 
 这里我们就简单介绍一下 `useRef()`。众所周知，一个网页中包含了若干DOM节点，当我们需要对某个DOM节点进行交互/操作时，我们可以通过如下方式**绑定DOM节点**。
-
 ```jsx
 import React, {useRef} from 'React';
 
@@ -145,7 +142,7 @@ export const SchoolContext = React.createContext({});
 ```
 接着，我们利用 `School` 的 `Provider` 来封装组件 `Student` 和 `Teacher`。
 ```jsx
-export default School(props){
+export default function School(props){
     return (
         // 核心代码
         <SchoolContext.Provider value={{studentName: 'douchen'}}>
@@ -239,4 +236,4 @@ function Counter() {
 参考资料： (衷心感谢各参考资料提供的帮助)
 +  [React官方文档](https://zh-hans.reactjs.org/)
 +  [React Hooks 入门教程](https://www.ruanyifeng.com/blog/2019/09/react-hooks.html)
-+  [轻松学会 React 钩子：以 useEffect() 为例](https://www.ruanyifeng.com/blog/2020/09/react-hooks-useeffect-tutorial.html)
++  [轻松学会 React 钩子：以 useEffect 为例](https://www.ruanyifeng.com/blog/2020/09/react-hooks-useeffect-tutorial.html)
