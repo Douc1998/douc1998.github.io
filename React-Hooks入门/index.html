@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>React Hooks 入门 | 窦晨的博客</title><meta name="keywords" content="React, Hooks"><meta name="author" content="窦晨"><meta name="copyright" content="窦晨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言React 作为前端三大主流框架之一，得到了许多开发者的亲睐。其组件化编程模式大大简化了前端开发过程，可以更好地管理组件间的逻辑和依赖关系。 刚开始在组里做项目的时候，好不容易掌握了 React 的一些基础知识，比如组件化、DOM渲染、生命周期等等，心里沾沾自喜觉得自己也算是入门了。结果，师兄突然跟我说：“你快去把 React Hooks 搞明白，这样开发起来就更方便了。” 于是我一个前端小白">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Hooks 入门">
+<meta property="og:url" content="https://blog.douchen.life/React-Hooks%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="窦晨的博客">
+<meta property="og:description" content="前言React 作为前端三大主流框架之一，得到了许多开发者的亲睐。其组件化编程模式大大简化了前端开发过程，可以更好地管理组件间的逻辑和依赖关系。 刚开始在组里做项目的时候，好不容易掌握了 React 的一些基础知识，比如组件化、DOM渲染、生命周期等等，心里沾沾自喜觉得自己也算是入门了。结果，师兄突然跟我说：“你快去把 React Hooks 搞明白，这样开发起来就更方便了。” 于是我一个前端小白">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/react.png">
+<meta property="article:published_time" content="2022-04-23T06:43:07.000Z">
+<meta property="article:modified_time" content="2022-04-25T08:44:49.393Z">
+<meta property="article:author" content="窦晨">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="React">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/react.png"><link rel="shortcut icon" href="/img/catLogo.png"><link rel="canonical" href="https://blog.douchen.life/React-Hooks%E5%85%A5%E9%97%A8/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":50,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'React Hooks 入门',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-25 16:44:49'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut8.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-icons"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-person-biking"></i><span> 运动</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/basketball/"><i class="fa-fw fas fa-basketball"></i><span> 篮球</span></a></li><li><a class="site-page child" href="/badminton/"><i class="fa-fw fas fa-golf-ball-tee"></i><span> 羽毛球</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user-astronaut"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/react.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">窦晨的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 归类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-icons"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-person-biking"></i><span> 运动</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/basketball/"><i class="fa-fw fas fa-basketball"></i><span> 篮球</span></a></li><li><a class="site-page child" href="/badminton/"><i class="fa-fw fas fa-golf-ball-tee"></i><span> 羽毛球</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user-astronaut"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">React Hooks 入门</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2022-04-23T06:43:07.000Z" title="发表于 2022-04-23 14:43:07">2022-04-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/React/">React</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="React Hooks 入门"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/">React</a> 作为前端三大主流框架之一，得到了许多开发者的亲睐。其<strong>组件化</strong>编程模式大大简化了前端开发过程，可以更好地管理组件间的逻辑和依赖关系。</p>
+<p>刚开始在组里做项目的时候，好不容易掌握了 React 的一些基础知识，比如组件化、DOM渲染、生命周期等等，心里沾沾自喜觉得自己也算是入门了。结果，师兄突然跟我说：“你快去把 <a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/hooks-faq.html#which-versions-of-react-include-hooks">React Hooks</a> 搞明白，这样开发起来就更方便了。” 于是我一个前端小白又开始去网络上搜索各种教程以及开发文档学习<code>React Hooks</code>。</p>
+<p>后来因为一些琐事忘记做学习笔记了，不过经过这段时间的实践和学习，现在也算是对 <code>React Hooks</code> 有了一点自己的理解。下面我将简单谈一谈 <strong>React Hooks的入门内容</strong>。</p>
+<h1 id="什么是-Hooks-？"><a href="#什么是-Hooks-？" class="headerlink" title="什么是 Hooks ？"></a>什么是 Hooks ？</h1><p><code>Hooks</code> 的中文解释为 “<strong>钩子</strong>”，而 <code>React Hooks</code> 则是在 v16.8 版本发布的一种全新的API，可以说是颠覆了 React 一直以来的<strong>类组件</strong>的写法模式。</p>
+<h2 id="类组件"><a href="#类组件" class="headerlink" title="类组件"></a>类组件</h2><p>写过 React 的人都知道，我们刚入门所接触的 React 都是从类组件开始，如下：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">HelloWorld</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">    <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello World !<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>从上面看，写组件类的时候好像不需要太多的代码量。但实际上，当我们的组件状态增多，业务逻辑变复杂时，组件类将会变得十分复杂（写项目的时候会有明显感觉）。</p>
+<p>组件类便于我们理解组件内部逻辑，管理组件各种状态，但也存在一些缺点。Redux 的作者 Dan Abramov <a target="_blank" rel="noopener" href="https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889">总结</a>了组件类的几个缺点：</p>
+<blockquote>
+<ol>
+<li>复杂的组件难以拆分，也不便于测试。</li>
+<li>业务逻辑分散在组建的各个方法中，容易出现重复逻辑和关联逻辑，造成代码冗余。</li>
+<li>组件类引入了复杂的编程模式，比如 render、props 和高阶组件。</li>
+</ol>
+</blockquote>
+<h2 id="函数组件"><a href="#函数组件" class="headerlink" title="函数组件"></a>函数组件</h2><p><strong>函数组件</strong>顾名思义，就是用函数的形式来编写组件的内部逻辑和功能。但是，我们刚接触<strong>面向对象编程</strong>的时候就知道，<strong>类是对一系列变量和方法的封装，其每个对象实例具有自己的状态属性</strong>，而<strong>函数只是一个过程，实现某种功能或者返回某个值</strong>。</p>
+<p>React 之前也有函数组件，如下：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">HelloWorld</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello World !<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>显然，这种函数组件虽然可以实现某种特定的功能，但是它<strong>不包含状态，也不支持生命周期方法</strong>，因此无法用于很多情景，更别说取代类了。</p>
+<h2 id="Hooks"><a href="#Hooks" class="headerlink" title="Hooks"></a>Hooks</h2><p>为了解决函数组件的不足之处，React 提出了 <code>Hooks</code> 的概念，即<strong>通过 “钩子” 的形式把函数中需要的状态 ”钩“ 进来</strong>。因此，我们利用 <code>React Hooks</code> 可以实现<strong>完全不用“类”，写出一个全功能的组件</strong>。</p>
+<h1 id="Hooks-常用钩子"><a href="#Hooks-常用钩子" class="headerlink" title="Hooks 常用钩子"></a>Hooks 常用钩子</h1><p>React Hooks 中有几种常用的钩子函数，分别是：</p>
+<blockquote>
+<p><strong>1. useEffect()</strong><br><strong>2. useState()</strong><br><strong>3. useRef()</strong><br><strong>3. useContext()</strong><br><strong>4. useReducer()</strong></p>
+</blockquote>
+<p>下面，我们将分别介绍这五种常用钩子函数的作用。（至于其他钩子函数，可以自行百度或查看<a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/hooks-reference.html">官网文档</a>）</p>
+<h2 id="useEffect-：副作用钩子"><a href="#useEffect-：副作用钩子" class="headerlink" title="useEffect()：副作用钩子"></a>useEffect()：副作用钩子</h2><p><code>useEffect()</code> 顾名思义，“作用”钩子。这也是我们平时开发中最常用的钩子函数，往往需要实现某些“作用”但找不到对应钩子的时候，我们就可以用它。</p>
+<p>那么 <code>useEffect()</code> 钩子的具体应用是什么呢？ 简单来说，当我们希望<strong>组件加载或更新后实现一些其他功能</strong>的时候，我们就可以用它。<strong>组件每渲染一次，<code>useEffect()</code>函数就会自动触发一次</strong>，至于是加载时触发还是更新后触发，要由我们设定的参数决定。</p>
+<p><code>useEffect()</code> 使用方式如下所示：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">HelloWorld</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="comment">// 关键代码</span></span><br><span class="line">    <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;Hello World !&#x27;</span>;</span><br><span class="line">    &#125;, []);</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;document.title&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中，<code>useEffect(() =&gt; &#123;&#125;, [])</code> 中的<strong>第一个参数是一个函数，即我们所需要实现的一些其他功能；第二个参数是一个 Array，如果为空，则只在组件挂载时触发一下，如果有相关属性值，则每当属性值改变就会触发一次</strong>。如下所示：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">HelloWorld</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">title</span> = props.<span class="property">title</span>;</span><br><span class="line">    &#125;, [props.<span class="property">title</span>]);</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;document.title&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的代码中，我们在第二个参数中设置了 <code>props.title</code>，即只要父组件传递过来的 <code>props.title</code> 发生了变化，这个子组件的 <code>document.title</code> 就会随之改变，重新渲染。<strong>因此，如果我们不希望某个 <code>useEffect()</code> 每次渲染时都执行，我们可以在第二个参数 Array 中添加依赖项，只有依赖性发生变化时才会重新渲染</strong>。</p>
+<h2 id="useState-：状态钩子"><a href="#useState-：状态钩子" class="headerlink" title="useState()：状态钩子"></a>useState()：状态钩子</h2><p><code>useState()</code> 也可以一眼看出大概是做什么用的，它就是给我们的函数组件<strong>添加和修改状态</strong>的钩子函数。因为函数组件没有状态，所以把需要的“状态”都存放在钩子里。</p>
+<p>我们举一个例子，创建一个 <code>Button</code> 函数组件，并赋予其一个状态，即文本值，当触发点击操作时，文本状态值会改变。代码如下所示：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Button</span>(<span class="params">props</span>)  &#123;</span><br><span class="line">    <span class="comment">// 关键代码</span></span><br><span class="line">    <span class="keyword">const</span>  [buttonText, setButtonText] =  <span class="title function_">useState</span>(<span class="string">&#x27;Hello World !&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    handleClick = <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 修改状态</span></span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">setButtonText</span>(<span class="string">&#x27;你好，世界！&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span>  <span class="language-xml"><span class="tag">&lt;<span class="name">button</span>  <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span>&gt;</span>&#123;buttonText&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>从上面的示例代码可以看出，<code>useState()</code> 的用法为 <code>const [状态名, set状态名] = useState(初始值)</code>。其中状态名不难理解，就是我们赋予状态的变量名称。</p>
+<p>后面的 “set状态名” 实际上就是<strong>更新状态的函数的一个习惯性描述名称</strong>，你也可以写出其他的名称，比如 <code>changeButtonText</code> 等等。但是为了提高代码的可读性， React 开发者一致约定将函数名写成 <code>set状态名</code> 的形式。当我们需要修改状态时，只需要 <code>set状态名(new state)</code> 即可更新。</p>
+<h2 id="useRef-：DOM交互钩子"><a href="#useRef-：DOM交互钩子" class="headerlink" title="useRef()：DOM交互钩子"></a>useRef()：DOM交互钩子</h2><p>看到 <code>useRef()</code> 我们应该不陌生，因为 React 在类组件中提供 <code>createRef</code> 方法帮助我们<strong>获取DOM节点</strong>。而在 React Hooks 中则提供了 <code>useRef()</code> 钩子实现相同作用。</p>
+<p>这里我们就简单介绍一下 <code>useRef()</code>。众所周知，一个网页中包含了若干DOM节点，当我们需要对某个DOM节点进行交互&#x2F;操作时，我们可以通过如下方式<strong>绑定DOM节点</strong>。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123;useRef&#125; <span class="keyword">from</span> <span class="string">&#x27;React&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">HelloWorld</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="comment">// 关键代码</span></span><br><span class="line">    <span class="keyword">const</span> myRef = <span class="title function_">useRef</span>(&#123;&#125;);</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">ref</span>=<span class="string">&#123;myRef&#125;</span>&gt;</span>Click Me !<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>绑定完成之后，我们就可以<strong>通过 <code>myRef.current</code> 来对该DOM节点进行相应的操作</strong>。</p>
+<h2 id="useContext-：共享状态钩子"><a href="#useContext-：共享状态钩子" class="headerlink" title="useContext()：共享状态钩子"></a>useContext()：共享状态钩子</h2><p>新手入门 React 的时候知道组件间最简单的传递消息的方式是：<strong>子组件通过<code>props</code> 的方式获取父组件的信息</strong>。</p>
+<p>然而，当我们需要传递信息的组件跨级过多，容易导致传递信息方式过于繁琐复杂，甚至容易出现很多错误，以及调试困难等问题。因此，React 也为我们提供了 <code>useContext()</code> 钩子函数实现<strong>信息共享</strong>。</p>
+<p>（<strong>原理与 props 大同小异</strong>）</p>
+<p>举个例子，我们希望组件 <code>School</code> 可以共享信息给 <code>Student</code> 和 <code>Teacher</code>。</p>
+<p>第一步使用 React Context API，在组件外部建立一个 Context。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title class_">SchoolContext</span> = <span class="title class_">React</span>.<span class="title function_">createContext</span>(&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<p>接着，我们利用 <code>School</code> 的 <code>Provider</code> 来封装组件 <code>Student</code> 和 <code>Teacher</code>。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">School</span>(props)&#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        <span class="comment">// 核心代码</span></span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">SchoolContext.Provider</span> <span class="attr">value</span>=<span class="string">&#123;&#123;studentName:</span> &#x27;<span class="attr">douchen</span>&#x27;&#125;&#125;&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#x27;School&#x27;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;<span class="name">Student</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;<span class="name">Teacher</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">SchoolContext.Provider</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过上面的代码，父组件 School 共享了 studentName 信息给 Student 和 Teacher 组件。那么 Student 和 Teacher 组件<strong>如何取到这个值</strong>呢？</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useContext &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">SchoolContext</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./School.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Student</span>(<span class="params">props</span>)&#123;</span><br><span class="line">    <span class="comment">// 核心代码</span></span><br><span class="line">    <span class="keyword">const</span> &#123; studentName &#125; = <span class="title function_">useContext</span>(<span class="title class_">SchoolContext</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;student&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>This student is &#123;studentName&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>由上面代码可知，我们可以<strong>先 <code>import</code>，然后通过 <code>useContext(SchoolContext)</code></strong> 来获取我们需要的值。</p>
+<p><strong>！！！注意！！！</strong>：到这儿可能就有人要问了，这为啥不直接用 <code>props</code> 呢？显然在这里用不用 props 都差不多。然而，一旦 <code>School</code> 的层级更高，而不只是 <code>Student</code> 和 <code>Teacher</code> 的父级，可能是更高的祖先级时，利用 props 一级一级传下去就会很复杂。</p>
+<p>此外，我们还可以用另外一种眼界来看待 <code>useContext()</code>。如果<strong>我们直接把 <code>Provider</code> 包在我们工程的最外层组件上，那就可以把最外层组件内的一些信息当作是全局信息，供所有子组件实用，那是不是很方便</strong>？</p>
+<h2 id="useReducer-：action-钩子"><a href="#useReducer-：action-钩子" class="headerlink" title="useReducer()：action 钩子"></a>useReducer()：action 钩子</h2><p>React 原本是不提供<strong>状态管理器</strong>的，更多的还是需要依赖外部库，如 <code>Redux</code>。但是，React Hooks 提供了 <code>useReducer()</code> 钩子函数实现状态管理。</p>
+<p>什么是状态管理器呢？可以理解为这个组件它并<strong>不负责UI，而是一个逻辑组件，用于管理其他组件间的逻辑关系和状态管理</strong>。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [state, dispatch] = <span class="title function_">useReducer</span>(reducer, initialState);</span><br></pre></td></tr></table></figure>
+<p>上面的状态管理器接受 reducer 函数和状态的初始值作为参数，返回一个数组。数组的第一个成员是<strong>状态的当前值</strong>，第二个成员是<strong>发送 action 的dispatch函数</strong>。</p>
+<p>举个例子，我们需要实现一个加减器，点击 + 按钮，计数加一；点击 - 按钮，计数减一。</p>
+<p>首先，我们需要定义一个状态管理器 <code>countReducer</code>，分别讨论加减。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">countReducer</span> = (<span class="params">state, action</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">switch</span>(action)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;add&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span>&#123;</span><br><span class="line">                ...state,</span><br><span class="line">                <span class="attr">count</span>: state.<span class="property">count</span> + <span class="number">1</span></span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;sub&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span>&#123;</span><br><span class="line">                ...state,</span><br><span class="line">                <span class="attr">count</span>: state.<span class="property">count</span> - <span class="number">1</span></span><br><span class="line">            &#125;</span><br><span class="line">        <span class="attr">default</span>:</span><br><span class="line">            <span class="keyword">return</span> state</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接着，我们的计数器UI组件代码如下：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Counter</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// 关键代码</span></span><br><span class="line">    <span class="keyword">const</span> [state, dispatch] = <span class="title function_">useReducer</span>(countReducer, &#123; <span class="attr">count</span>: <span class="number">0</span> &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span>  (</span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Count: &#123;state.count&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            // 关键代码</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> dispatch(&#x27;add&#x27;)&#125;&gt;+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> dispatch(&#x27;sub&#x27;)&#125;&gt;-<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>由上可知，<code>useReducer()</code> 可以帮助我们创建状态管理器，<strong>只负责组件中的状态和各种逻辑的管理</strong>。</p>
+<p>不过，<code>useReducer()</code> 相比于 <code>Redux</code>，没法提供中间件（Middleware）和时间旅行（Time travel），如果你需要这两个功能，还是要用 <a target="_blank" rel="noopener" href="https://www.redux.org.cn/">Redux</a>。</p>
+<p>(<strong>个人还是推荐使用 Redux 来实现状态管理！</strong>)</p>
+<hr>
+<p><strong>很感谢你能看到这里！谢谢～</strong></p>
+<hr>
+<p>参考资料： (衷心感谢各参考资料提供的帮助)</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/">React官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2019/09/react-hooks.html">React Hooks 入门教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2020/09/react-hooks-useeffect-tutorial.html">轻松学会 React 钩子：以 useEffect() 为例</a></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">窦晨</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.douchen.life/React-Hooks%E5%85%A5%E9%97%A8/">https://blog.douchen.life/React-Hooks%E5%85%A5%E9%97%A8/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.douchen.life" target="_blank">窦晨的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><a class="post-meta__tags" href="/tags/React/">React</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/react.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/%E6%B5%85%E8%B0%88CSS-position%E4%B8%AD%E7%9A%84relative%E5%92%8Cabsolute/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/littlePrince3.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">浅谈CSS position中的relative和absolute</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/Ant-Design-Logo%E5%BD%A9%E8%9B%8B%E5%8A%A8%E7%94%BB%E5%AE%9E%E7%8E%B0/" title="Ant Design Logo彩蛋动画实现"><img class="cover" src="https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/AntdLogo.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-15</div><div class="title">Ant Design Logo彩蛋动画实现</div></div></a></div><div><a href="/CSS%E7%9A%84hover%E9%80%89%E6%8B%A9%E5%99%A8%E6%8E%A7%E5%88%B6%E5%85%B6%E4%BB%96%E5%85%83%E7%B4%A0/" title="CSS中Hover选择器如何控制其他元素？"><img class="cover" src="https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space13.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-21</div><div class="title">CSS中Hover选择器如何控制其他元素？</div></div></a></div><div><a href="/%E6%B5%85%E8%B0%88CSS-position%E4%B8%AD%E7%9A%84relative%E5%92%8Cabsolute/" title="浅谈CSS position中的relative和absolute"><img class="cover" src="https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/littlePrince3.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-21</div><div class="title">浅谈CSS position中的relative和absolute</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Hooks-%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">什么是 Hooks ？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E7%BB%84%E4%BB%B6"><span class="toc-number">2.1.</span> <span class="toc-text">类组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6"><span class="toc-number">2.2.</span> <span class="toc-text">函数组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hooks"><span class="toc-number">2.3.</span> <span class="toc-text">Hooks</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hooks-%E5%B8%B8%E7%94%A8%E9%92%A9%E5%AD%90"><span class="toc-number">3.</span> <span class="toc-text">Hooks 常用钩子</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#useEffect-%EF%BC%9A%E5%89%AF%E4%BD%9C%E7%94%A8%E9%92%A9%E5%AD%90"><span class="toc-number">3.1.</span> <span class="toc-text">useEffect()：副作用钩子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#useState-%EF%BC%9A%E7%8A%B6%E6%80%81%E9%92%A9%E5%AD%90"><span class="toc-number">3.2.</span> <span class="toc-text">useState()：状态钩子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#useRef-%EF%BC%9ADOM%E4%BA%A4%E4%BA%92%E9%92%A9%E5%AD%90"><span class="toc-number">3.3.</span> <span class="toc-text">useRef()：DOM交互钩子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#useContext-%EF%BC%9A%E5%85%B1%E4%BA%AB%E7%8A%B6%E6%80%81%E9%92%A9%E5%AD%90"><span class="toc-number">3.4.</span> <span class="toc-text">useContext()：共享状态钩子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#useReducer-%EF%BC%9Aaction-%E9%92%A9%E5%AD%90"><span class="toc-number">3.5.</span> <span class="toc-text">useReducer()：action 钩子</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By 窦晨</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://blog.douchen.life/">Hi, Welcome to My Blog !</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '0e4b9923c23931aed9e5',
+      clientSecret: 'a64ad83c7dfc2bc7e80914bf13a338e5987f37a7',
+      repo: 'douc1998.github.io',
+      owner: 'Douc1998',
+      admin: ['Douc1998'],
+      id: '75b6f274e083bf5f853d8291f467b597',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
