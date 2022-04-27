@@ -9,7 +9,7 @@ menu:
     归档: /archives/ || fas fa-archive
     分类: /categories/ || fas fa-folder-open
   生活||fa fa-icons:
-    照片: /photo/ || fas fa-images
+    照片: /photos/ || fas fa-images
     音乐: /music/ || fas fa-music
     电影: /movies/ || fas fa-video
   运动|| fa fa-person-biking:
