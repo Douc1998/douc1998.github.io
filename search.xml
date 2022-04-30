@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Github干货收藏(持续更新)</title>
-    <url>/Github%E5%B9%B2%E8%B4%A7%E6%94%B6%E8%97%8F/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Github</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>收藏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello</title>
-    <url>/Hello/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Hexo博客配置Gitalk评论系统</title>
-    <url>/Hexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AEGitalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ant Design Logo彩蛋动画实现</title>
     <url>/Ant-Design-Logo%E5%BD%A9%E8%9B%8B%E5%8A%A8%E7%94%BB%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[]]></content>
@@ -53,6 +25,34 @@
       </tags>
   </entry>
   <entry>
+    <title>Github干货收藏(持续更新)</title>
+    <url>/Github%E5%B9%B2%E8%B4%A7%E6%94%B6%E8%97%8F/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Github</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>收藏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客配置Gitalk评论系统</title>
+    <url>/Hexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AEGitalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello</title>
+    <url>/Hello/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>React Hooks 入门</title>
     <url>/React-Hooks%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[]]></content>
@@ -62,6 +62,32 @@
       <tags>
         <tag>前端</tag>
         <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于React实现《贪吃蛇》小游戏</title>
+    <url>/React%E8%B4%AA%E5%90%83%E8%9B%87%E5%B0%8F%E6%B8%B8%E6%88%8F/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>React</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于React实现《推箱子》小游戏</title>
+    <url>/React%E6%8E%A8%E7%AE%B1%E5%AD%90%E5%B0%8F%E6%B8%B8%E6%88%8F/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>React</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -100,7 +126,7 @@
       </tags>
   </entry>
   <entry>
-    <title>浅谈JavaScript中的深拷贝和浅拷</title>
+    <title>浅谈JavaScript中的深拷贝和浅拷贝</title>
     <url>/%E6%B5%85%E8%B0%88JS%E4%B8%AD%E7%9A%84%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7/</url>
     <content><![CDATA[]]></content>
       <categories>
