@@ -29,7 +29,6 @@ sticky: 10  # 置顶，数值越大优先级越高
 🔗 链接：https://github.com/animate-css/animate.css
 
 
-
 ## React
 + **`React`**
 📑 描述：Facebook 的 **React 前端框架**，可用于了解学习 React 源码。
@@ -57,12 +56,26 @@ sticky: 10  # 置顶，数值越大优先级越高
 
 
 ## TypeScript
+
++ **`learn-typescript`**
+📑 描述：前端大神冴羽的 **TypeScript 教程**。TypeScript系列文章由官方文档翻译、重难点解析、实战技巧三个部分组成，涵盖入门、进阶、实战，旨在为你提供一个系统学习 TS 的教程，全系列预计 40 篇左右。目前正在持续更新中！
+👍 推荐指数：⭐️⭐️⭐️⭐️
+🔗 链接：https://github.com/mqyqingfeng/learn-typescript
+
 + **`TypeScript-Doc-Zh`**
 📑 描述：由博主自己纯手工翻译的 **TypeScript 官方文档中文版**，目前仍在翻译中，适合不善于阅读英文文档的人或TypeScript小白。
 👍 推荐指数：⭐️⭐️⭐️
 🔗 链接：https://github.com/Chorer/TypeScript-Doc-Zh
 
 
+
+---
+
+# 面试系列
++ **`frontend-interview-question-and-answer`**
+📑 描述：前端大神冴羽发布的**前端面试系列**，包括各路同行的回答和解决方法，大神自己和团队不定期亲自解答。
+👍 推荐指数：⭐️⭐️⭐️
+🔗 链接：https://github.com/mqyqingfeng/frontend-interview-question-and-answer
 
 ---
 # 机器/深度学习
@@ -158,6 +171,11 @@ sticky: 10  # 置顶，数值越大优先级越高
 🔗 链接：https://github.com/geekan/HowToLiveLonger
 ---
 # 博客
+
++ **`冴羽的前端博客`**
+📑 描述：前端大神，9000+ followers高质量博主冴羽的前端博客，至今已获得26000+ Stars。博客里更新了JavaScript专题系列、ES6、TypeScript系列等教程，以及前端面试系列干货。
+👍 推荐指数：⭐️⭐️⭐️⭐️⭐️
+🔗 链接：https://github.com/mqyqingfeng/Blog
 
 + **`冬于的博客`**
 📑 描述：作者的个人博客，内容**以深度学习、机器学习、图神经网络**为主。还有《统计学习方法》阅读笔记、Pytorch与视觉竞赛入门、BERT实战等系列。
