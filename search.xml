@@ -37,6 +37,11 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello</title>
+    <url>/Hello/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>React Hooks 入门</title>
     <url>/React-Hooks%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[]]></content>
@@ -47,11 +52,6 @@
         <tag>前端</tag>
         <tag>React</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello</title>
-    <url>/Hello/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Hexo博客配置Gitalk评论系统</title>
@@ -65,16 +65,14 @@
       </tags>
   </entry>
   <entry>
-    <title>基于React实现《贪吃蛇》小游戏</title>
-    <url>/React%E8%B4%AA%E5%90%83%E8%9B%87%E5%B0%8F%E6%B8%B8%E6%88%8F/</url>
+    <title>基于 Github Page + Hexo + Butterfly主题 的个人博客搭建教程 (Mac版)</title>
+    <url>/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>React</category>
+        <category>教程</category>
       </categories>
       <tags>
-        <tag>前端</tag>
-        <tag>React</tag>
-        <tag>JavaScript</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -91,14 +89,16 @@
       </tags>
   </entry>
   <entry>
-    <title>基于 Github Page + Hexo + Butterfly主题 的个人博客搭建教程 (Mac版)</title>
-    <url>/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</url>
+    <title>基于React实现《贪吃蛇》小游戏</title>
+    <url>/React%E8%B4%AA%E5%90%83%E8%9B%87%E5%B0%8F%E6%B8%B8%E6%88%8F/</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>教程</category>
+        <category>React</category>
       </categories>
       <tags>
-        <tag>博客</tag>
+        <tag>前端</tag>
+        <tag>React</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
