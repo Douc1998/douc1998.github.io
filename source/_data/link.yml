@@ -43,9 +43,13 @@
       descr: 阮一峰老师的网络日志
 
 
-- class_name: 娱乐网站
+- class_name: 常用网站
   class_desc: 
   link_list:
+    - name: WallpaperHub
+      link: https://wallpaperhub.app/
+      avatar: ../image/WallpaperHub.png
+      descr: 高清图片资源网站
     - name: QQ
       link: https://im.qq.com/index
       avatar: ../image/QQ.png

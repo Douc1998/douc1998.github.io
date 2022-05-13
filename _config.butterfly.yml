@@ -127,6 +127,9 @@ cover:
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   # 文章默认封面图片, 下面是多张图片的写法, 加载时会随机使用某个图片
   default_cover:
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/animal1.png
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/animal2.jpeg
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/animal3.jpeg
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut1.png
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut2.png
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut5.png
@@ -153,6 +156,8 @@ cover:
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space13.jpeg
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/sky1.jpeg
   - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/book1.jpeg
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/other1.jpeg
+  - https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/other2.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
