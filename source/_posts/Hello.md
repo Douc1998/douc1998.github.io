@@ -3,8 +3,8 @@ title: 你好 ！Hello !
 date: 2022-04-11 12:13:06
 comments: true  # 开启评论
 toc: true  # 显示文字toc
-top_img: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/other2.jpg  # 文章页头部图片
-cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/other2.jpg  # 主页中显示的文章封面图片
+top_img: https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/background/other2.jpg  # 文章页头部图片
+cover: https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/background/other2.jpg  # 主页中显示的文章封面图片
 ---
 # 你好！
 你好呀！这是我第一次搭建博客，也是我的第一篇博客。

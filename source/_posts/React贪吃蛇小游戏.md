@@ -8,8 +8,8 @@ tags:
 categories: React  # 类别
 comments: true  # 开启评论
 toc: true  # 显示文字toc
-top_img: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/GreedySnake.png  # 文章页头部图片
-cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/GreedySnake.png   # 主页中显示的文章封面图片
+top_img: https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/background/GreedySnake.png  # 文章页头部图片
+cover: https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/background/GreedySnake.png   # 主页中显示的文章封面图片
 keywords: "React，JavaScript，前端，贪吃蛇"
 ---
 # 前言

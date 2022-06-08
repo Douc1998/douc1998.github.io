@@ -7,8 +7,8 @@ tags:
 categories: CSS
 comments: true
 toc: true
-top_img: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space13.jpeg
-cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space13.jpeg
+top_img: https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space13.jpeg
+cover: https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/background/space13.jpeg
 keywords: "CSS, Hover"
 ---
 # 前言

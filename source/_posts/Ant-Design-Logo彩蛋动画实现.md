@@ -7,8 +7,8 @@ tags:
 categories: CSS  # 类别
 comments: true  # 开启评论
 toc: true  # 显示文字toc
-top_img: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/AntDesign.png  # 文章页头部图片
-cover: https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/AntdLogo.png  # 主页中显示的文章封面图片
+top_img: https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/AntDesign.png  # 文章页头部图片
+cover: https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/AntdLogo.png  # 主页中显示的文章封面图片
 keywords: "CSS，Animation"
 ---
 
@@ -62,12 +62,12 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
     height: 100px;
     position: relative;   
     color: transparent;
-    background-image: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg'); 
+    background-image: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg'); 
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     /* 也可以统一，直接用 background写， 按照参数顺序即可 */
-    /* background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg') center/contain no-repeat; */
+    /* background: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg') center/contain no-repeat; */
     cursor: pointer;
   }
   .logo::after{
@@ -75,12 +75,12 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
     position: absolute;
     width: 32px;
     height: 32px;
-    background-image: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg'); 
+    background-image: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg'); 
     background-position: 0% 50%;
     background-size: cover;
     background-repeat: no-repeat;
     /* 也可以统一，直接用 background写， 按照参数顺序即可 */
-    /* background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg') 0% 50% / cover no-repeat;*/
+    /* background: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg') 0% 50% / cover no-repeat;*/
     right: 113px;
     top: -18px;
 }
@@ -101,12 +101,12 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
     height: 100px;
     position: relative;   
     color: transparent;
-    background-image: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg'); 
+    background-image: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg'); 
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     /* 也可以统一，直接用 background写， 按照参数顺序即可 */
-    /* background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg') center/contain no-repeat; */
+    /* background: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg') center/contain no-repeat; */
     cursor: pointer;
     text-align: center;
     margin: 0 auto;
@@ -116,12 +116,12 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
     position: absolute;
     width: 32px;
     height: 32px;
-    background-image: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg'); 
+    background-image: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg'); 
     background-position: 0% 50%;
     background-size: cover;
     background-repeat: no-repeat;
     /* 也可以统一，直接用 background写， 按照参数顺序即可 */
-    /* background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg') 0% 50% / cover no-repeat;*/
+    /* background: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg') 0% 50% / cover no-repeat;*/
     right: 113px;
     top: -18px;
 }
@@ -163,7 +163,7 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
   height: 100px;
   position: relative;
   color: transparent;
-  background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg') center/contain no-repeat;
+  background: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg') center/contain no-repeat;
   cursor: pointer;
   text-align: center;
   margin: 0 auto;
@@ -173,7 +173,7 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
   position: absolute;
   width: 32px;
   height: 32px;
-  background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg') 0% 50% / cover no-repeat;
+  background: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg') 0% 50% / cover no-repeat;
   right: 113px;
   top: -18px;
   animation: move 1s steps(10, end) infinite;
@@ -207,7 +207,7 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
   height: 100px;
   position: relative;
   color: transparent;
-  background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg') center/contain no-repeat;
+  background: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg') center/contain no-repeat;
   cursor: pointer;
   text-align: center;
   margin: 0 auto;
@@ -217,7 +217,7 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
   position: absolute;
   width: 32px;
   height: 32px;
-  background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg') 0% 50% / cover no-repeat;
+  background: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg') 0% 50% / cover no-repeat;
   right: 113px;
   top: -18px;
 }
@@ -254,7 +254,7 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
   height: 100px;
   position: relative;
   color: transparent;
-  background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg') center/contain no-repeat;
+  background: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg') center/contain no-repeat;
   cursor: pointer;
   text-align: center;
   margin: 0 auto;
@@ -264,7 +264,7 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
   position: absolute;
   width: 32px;
   height: 32px;
-  background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg') 0% 50% / cover no-repeat;
+  background: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg') 0% 50% / cover no-repeat;
   right: 113px;
   top: -18px;
   animation: move 1s steps(10, end) infinite;
@@ -289,7 +289,7 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
   height: 100px;
   position: relative;
   color: transparent;
-  background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg') center/contain no-repeat;
+  background: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/logo.svg') center/contain no-repeat;
   cursor: pointer;
 }
 .logo::after{
@@ -297,7 +297,7 @@ So，I have a dream ！ ...扯远了，So 我打算自己**重现彩蛋动画**�
   position: absolute;
   width: 32px;
   height: 32px;
-  background: url('https://cdn.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg') 0% 50% / cover no-repeat;
+  background: url('https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/svg/icons.svg') 0% 50% / cover no-repeat;
   right: 113px;
   top: -18px;
   animation: move 1s steps(10, end) infinite;
