@@ -7,8 +7,8 @@ tags:
 categories: Github
 comments: true
 toc: true
-top_img: https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut4.png
-cover: https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
+top_img: https://gcore.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut4.png
+cover: https://gcore.jsdelivr.net/gh/Douc1998/CDN-source/image/logo/github.png
 sticky: 10  # 置顶，数值越大优先级越高
 ---
 **用于收藏 `Github` 上的优秀项目，需要自取👇，欢迎分享与添加～**

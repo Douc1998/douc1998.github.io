@@ -7,8 +7,8 @@ tags:
 categories: 教程 
 comments: true
 toc: true
-top_img: https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut3.png
-cover: https://fastly.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut3.png
+top_img: https://gcore.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut3.png
+cover: https://gcore.jsdelivr.net/gh/Douc1998/CDN-source/image/background/astronaut3.png
 keywords: "jsDelivr, Github"
 ---
 
@@ -64,13 +64,13 @@ keywords: "jsDelivr, Github"
 
 只需要把我们的访问资源的链接改为如下即可:
 ```
-https://fastly.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件夹名/文件名
+https://gcore.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件夹名/文件名
 
 # gh 表示是 Github 仓库
 ```
 这里的发布版本号就是我们刚刚创建的版本号。以我的仓库为例，那么我们的访问链接可以改为：
 ```
-https://fastly.jsdelivr.net/gh/Douc1998/CDN-source@1.0/image/logo/myLogo.png
+https://gcore.jsdelivr.net/gh/Douc1998/CDN-source@1.0/image/logo/myLogo.png
 
 # 上面版本号改为了1.0, 因为我之前发布的是1.0版本。
 # 所以如果你按照我上面教程写的2.0，只需要把仓库后面的版本号改为2.0即可。
@@ -82,7 +82,7 @@ https://fastly.jsdelivr.net/gh/Douc1998/CDN-source@1.0/image/logo/myLogo.png
 
 因此，我们可以直接 **不发布**，访问的地址去掉 `@发布的版本号` 即可！
 ```
-https://fastly.jsdelivr.net/gh/你的用户名/你的仓库名/文件夹名/文件名
+https://gcore.jsdelivr.net/gh/你的用户名/你的仓库名/文件夹名/文件名
 ```
 
 这样链接访问的就是你的资源仓库里的最新内容，不会再去考虑发布的版本了。
@@ -93,7 +93,7 @@ https://fastly.jsdelivr.net/gh/你的用户名/你的仓库名/文件夹名/文�
 1. **通过 Github 创建资源仓库**。
 2. **上传资源到仓库中**。
 3. **(发布版本 / 不发布)** 。
-4. **添加 `fastly.jsdelivr.net` 信息**。
+4. **添加 `gcore.jsdelivr.net` 信息**。
 
 网络上也有不少博主在我们的基础上使用 [PicGo](https://github.com/Molunerfinn/PicGo) 来实现的。这种方法可以让图片管理更加方便，有需要可以自行查阅相关资料。
 
