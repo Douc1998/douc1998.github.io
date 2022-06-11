@@ -41,7 +41,6 @@ copy:
 #   icon: link || the description
 social:
   fab fa-github: https://github.com/Douc1998 || Github
-  fab fa-weibo: https://weibo.com/u/7075317665 || 微博
   fas fa-envelope: mailto:whu_dc@whu.edu.cn || 邮件
 
 # search (搜索)
