@@ -22,6 +22,12 @@ sticky: 10  # 置顶，数值越大优先级越高
 ---
 # 前端
 
++ **`带你入门前端工程`** 
+📑 描述：主要记录了作者在近年来，在**前端工程师实践经验和学习心得方面**的总结，适合对前端工程化不了解或了解得不多的 “菜鸟” 同学。
+👍 推荐指数：⭐️⭐️⭐️
+🔗 链接：https://github.com/woai3c/introduction-to-front-end-engineering
+
+
 ## CSS
 + **`Animate.CSS`** 
 📑 描述：一款 **CSS 动画封装库**，使用简单方便，安装依赖库后可以直接在 animation-name中定义需要的动画特效。
@@ -42,9 +48,13 @@ sticky: 10  # 置顶，数值越大优先级越高
 ## React
 + **`React`**
 📑 描述：Facebook 的 **React 前端框架**，可用于了解学习 React 源码。
-👍 推荐指数：⭐️⭐️
+👍 推荐指数：⭐️⭐️⭐️⭐️
 🔗 链接：https://github.com/facebook/react
 
++ **`big-react`**
+📑 描述：**从零实现 React v18 的核心功能**，亲手造一个 React 18。
+👍 推荐指数：⭐️⭐️
+🔗 链接：https://github.com/BetaSu/big-react
 
 
 ## JavaScript
@@ -62,6 +72,11 @@ sticky: 10  # 置顶，数值越大优先级越高
 📑 描述：一个开源的 **JavaScript 可视化调试工具**。输入代码运行后，可动态展示任务队列、调用栈、Event Loop等过程与结果。适合帮助小白了解JS引擎内部原理和调试代码。
 👍 推荐指数：⭐️⭐️
 🔗 链接：https://github.com/Hopding/js-visualizer-9000-client
+
++ **`1loc.dev`**
+📑 描述：收集了很多**1行 JS 代码实现的常用功能**。
+👍 推荐指数：⭐️⭐️⭐️
+🔗 链接：https://1loc.dev
 
 
 
@@ -86,6 +101,13 @@ sticky: 10  # 置顶，数值越大优先级越高
 📑 描述：前端大神冴羽发布的**前端面试系列**，包括各路同行的回答和解决方法，大神自己和团队不定期亲自解答。
 👍 推荐指数：⭐️⭐️⭐️
 🔗 链接：https://github.com/mqyqingfeng/frontend-interview-question-and-answer
+
+
++ **`题解大全-1`**
+📑 描述：本项目**包含 LeetCode、《剑指 Offer（第 2 版）》、《剑指 Offer（专项突击版）》、《程序员面试金典（第 6 版）》等题目的相关题解**。所有题解均由多种编程语言实现，包括但不限于：Java、Python、C++、Go、TypeScript、Rust，日常更新。
+👍 推荐指数：⭐️⭐️⭐️⭐️
+🔗 链接：https://github.com/doocs/leetcode
+
 
 ---
 # 机器/深度学习
@@ -168,6 +190,20 @@ sticky: 10  # 置顶，数值越大优先级越高
 👍 推荐指数：⭐️⭐️⭐️⭐️⭐️
 🔗 链接：https://deerchao.cn/tutorials/regex/regex.htm
 
++ **`交互式练习正则表达式`**
+📑 描述：RegexOne - **通过简单的交互式练习来学习正则表达式**。
+👍 推荐指数：⭐️⭐️⭐️⭐️⭐️
+🔗 链接：https://imageslr.github.io/regexone-cn/lesson/introduction_and_abcs.html
+
++ **`Maple-font 圆角等宽字体`**
+📑 描述：**Maple-font 开源的圆角等宽字体**。
+👍 推荐指数：⭐️⭐️
+🔗 链接：https://github.com/subframe7536/Maple-font
+
++ **`前端性能分析工具和指标`**
+📑 描述：讲解**前端性能分析工具和指标**。
+👍 推荐指数：⭐️⭐️
+🔗 链接：https://xiongteng.cc/2022/06/2134762.html?continueFlag=7069e4efab2f3765cad3a1e62f34d864
 
 ---
 # 生活
